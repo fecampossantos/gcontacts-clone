@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col offset="2" size="3">Name</ion-col>
+          <ion-col offset="1">Number</ion-col>
+          <ion-col>Email</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list-header>
+    <ion-item>
+      <ion-grid>
+        <ion-row *ngFor="let c of contacts" (click)="presentDetailsModal(c)">
+          <ion-col size="2"><ion-avatar style="width: 40px; height: 40px;"><img src={{c.avatar}}></ion-avatar></ion-col>
+          <ion-col>{{c.name}}</ion-col>
+          <ion-col>{{c.number}}</ion-col>
+          <ion-col>{{c.email}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>

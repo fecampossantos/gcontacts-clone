@@ -1,0 +1,33 @@
+<ion-content>
+  <div class="ion-page">
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img class="ion-float-left" src={{contact.avatar}} >
+        </ion-avatar>
+        <ion-label>{{contact.name}}</ion-label>
+        <ion-button color="dark" size="default" (click)="editContact()" slot="end" shape="round">
+          <ion-icon name="create-outline" ></ion-icon>
+        </ion-button>
+      </ion-item>
+      
+           
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-icon slot="start" name="call-outline"></ion-icon>
+        <ion-text>{{contact.number}}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="mail-outline"></ion-icon>
+        <ion-text><h4>{{contact.email}}</h4></ion-text>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+  
+      
+</div>
+</ion-content>
